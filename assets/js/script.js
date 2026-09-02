@@ -62,6 +62,47 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   };
 
+  const setHeroVideo = (value) => {
+    const container = document.getElementById('video-box');
+    if (!container) return;
+
+    try {
+      const url = new URL(value);
+      const vturbMatch = url.hostname === 'scripts.converteai.net'
+        ? url.pathname.match(/\/players\/([a-zA-Z0-9]+)\/v\d+\/player\.js$/)
+        : null;
+
+      if (vturbMatch) {
+        const playerId = vturbMatch[1];
+        const smartPlayer = document.createElement('vturb-smartplayer');
+        smartPlayer.id = `vid-${playerId}`;
+        smartPlayer.style.cssText = 'display: block; margin: 0 auto; width: 100%;';
+
+        const placeholder = document.createElement('div');
+        placeholder.className = 'vturb-player-placeholder';
+        placeholder.style.cssText = 'position: relative; width: 100%; padding: 56.25% 0 0; z-index: 0; background-color: black;';
+        smartPlayer.appendChild(placeholder);
+
+        const playerScript = document.createElement('script');
+        playerScript.src = url.href;
+        playerScript.async = true;
+
+        container.replaceChildren(smartPlayer, playerScript);
+        return;
+      }
+
+      const iframe = document.createElement('iframe');
+      iframe.className = 'hero-iframe hero-iframe-visible';
+      iframe.src = normalizeVideoUrl(value);
+      iframe.title = 'Video KADI Jabonería Artesanal';
+      iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+      iframe.allowFullscreen = true;
+      container.replaceChildren(iframe);
+    } catch {
+      console.warn('O link de vídeo informado na planilha não é válido. O player padrão será mantido.');
+    }
+  };
+
   const applySiteConfig = (config) => {
     if (config.checkout) {
       document.querySelectorAll('[data-config-link="checkout"]').forEach((link) => {
@@ -77,8 +118,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     if (config.video) {
-      const iframe = document.getElementById('hero-iframe');
-      if (iframe) iframe.dataset.src = normalizeVideoUrl(config.video);
+      setHeroVideo(config.video);
     }
 
     if (config.preco) {
@@ -105,21 +145,6 @@ document.addEventListener('DOMContentLoaded', () => {
     .catch((error) => {
       console.warn('Não foi possível carregar a configuração da planilha. Os valores padrão serão mantidos.', error);
     });
-
-  // Video player
-  const videoOverlay = document.getElementById('video-overlay');
-  const videoBox = document.getElementById('video-box');
-  const heroIframe = document.getElementById('hero-iframe');
-
-  if (videoOverlay && videoBox && heroIframe) {
-    videoOverlay.addEventListener('click', () => {
-      const videoSrc = heroIframe.getAttribute('data-src');
-      if (videoSrc && (!heroIframe.src || heroIframe.src === window.location.href)) {
-        heroIframe.src = videoSrc;
-      }
-      videoBox.classList.add('playing');
-    });
-  }
 
   // 3. FAQ Accordion
   const faqItems = document.querySelectorAll('.faq-item');

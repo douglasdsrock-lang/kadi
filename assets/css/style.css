@@ -588,6 +588,14 @@ h1, h2, h3, h4, h5, h6 {
   display: none;
 }
 
+.hero-iframe-visible {
+  display: block;
+}
+
+.hero-video-container vturb-smartplayer {
+  width: 100%;
+}
+
 .hero-video-container.playing .video-overlay {
   display: none;
 }
