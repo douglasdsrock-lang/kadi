@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 278 116" fill="none">
+  <title>KADI · Jabonería Artesanal</title>
+  <defs>
+    <clipPath id="soap"><rect x="6" y="15" width="66" height="63" rx="23" transform="rotate(-9 39 46.5)"/></clipPath>
+  </defs>
+  <g clip-path="url(#soap)">
+    <path fill="#F0A7BD" d="M0 0h84v92H0z"/>
+    <path fill="#F5BE9C" d="M-5 39C16 12 38 64 80 29v61H-5Z"/>
+    <path fill="#BAA0CC" d="M-5 65C18 36 39 84 80 52v40H-5Z"/>
+    <path stroke="#FFFDF9" stroke-width="3" stroke-linecap="round" d="M-4 48C19 21 40 73 81 38"/>
+  </g>
+  <path d="M20 28c5-5 11-6 16-6" stroke="#FFFDF9" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="70" cy="9" r="5" fill="#F5BE9C"/>
+  <circle cx="82" cy="23" r="3" fill="#BAA0CC"/>
+  <g stroke="#53384F" stroke-width="10" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M104 12v61m29-40-27 21 29 19"/>
+    <path d="M184 35v38m0-20c0-27-37-27-37 0s37 27 37 0"/>
+    <path d="M237 12v61m0-20c0-27-37-27-37 0s37 27 37 0"/>
+    <path d="M260 35v38"/>
+  </g>
+  <circle cx="260" cy="15" r="6" fill="#D57292"/>
+  <text x="143" y="104" text-anchor="middle" fill="#725D70" font-family="Arial, sans-serif" font-size="10" font-weight="600" letter-spacing="3">JABONERÍA ARTESANAL</text>
+</svg>

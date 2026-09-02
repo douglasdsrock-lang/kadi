@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 88 88" fill="none">
+  <title>KADI</title>
+  <defs><clipPath id="soap"><rect x="9" y="20" width="66" height="63" rx="23" transform="rotate(-9 42 51.5)"/></clipPath></defs>
+  <g clip-path="url(#soap)">
+    <path fill="#F0A7BD" d="M0 0h88v88H0z"/>
+    <path fill="#F5BE9C" d="M-2 44C19 17 41 69 83 34v61H-2Z"/>
+    <path fill="#BAA0CC" d="M-2 70C21 41 42 89 83 57v40H-2Z"/>
+    <path stroke="#FFFDF9" stroke-width="3" stroke-linecap="round" d="M-1 53C22 26 43 78 84 43"/>
+  </g>
+  <path d="M23 33c5-5 11-6 16-6" stroke="#FFFDF9" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="70" cy="11" r="5" fill="#F5BE9C"/>
+  <circle cx="82" cy="25" r="3" fill="#BAA0CC"/>
+</svg>
