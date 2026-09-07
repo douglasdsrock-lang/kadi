@@ -116,7 +116,7 @@
   - ✅ Bono: Cómo Hacer Ambientador para Autos
   - ✅ Bono: Exfoliante para Pies
   - ✅ Bono: Artes para Empaques
-- **[price]** €54,99
+- **[price]** $54,99
 - **[cta]** QUIERO EMPEZAR AHORA
 
 ---

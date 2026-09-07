@@ -176,6 +176,38 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // 4. Products carousel
+  const productsCarousel = document.querySelector('[data-products-carousel]');
+  if (productsCarousel) {
+    const viewport = productsCarousel.querySelector('[data-carousel-viewport]');
+    const track = productsCarousel.querySelector('.products-carousel-track');
+    const previousButton = productsCarousel.querySelector('[data-carousel-prev]');
+    const nextButton = productsCarousel.querySelector('[data-carousel-next]');
+
+    const updateCarouselButtons = () => {
+      const maxScroll = viewport.scrollWidth - viewport.clientWidth;
+      previousButton.disabled = viewport.scrollLeft <= 2;
+      nextButton.disabled = viewport.scrollLeft >= maxScroll - 2;
+    };
+
+    const scrollCarousel = (direction) => {
+      const firstCard = track.querySelector('.product-carousel-card');
+      if (!firstCard) return;
+      const gap = Number.parseFloat(getComputedStyle(track).gap) || 0;
+      const distance = firstCard.getBoundingClientRect().width + gap;
+      viewport.scrollBy({
+        left: direction * distance,
+        behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth'
+      });
+    };
+
+    previousButton.addEventListener('click', () => scrollCarousel(-1));
+    nextButton.addEventListener('click', () => scrollCarousel(1));
+    viewport.addEventListener('scroll', updateCarouselButtons, { passive: true });
+    window.addEventListener('resize', updateCarouselButtons);
+    updateCarouselButtons();
+  }
+
   // 5. Smooth Scroll for internal anchor links
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
