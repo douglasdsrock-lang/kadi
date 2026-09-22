@@ -1084,30 +1084,6 @@ h1, h2, h3, h4, h5, h6 {
 
 .bonus-card-guide .bonus-title { line-height: 1.4; }
 
-.bonus-guide-image::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(180deg, transparent 45%, rgba(48, 16, 63, 0.72) 100%);
-  pointer-events: none;
-}
-
-.bonus-image-label {
-  position: absolute;
-  z-index: 1;
-  right: 16px;
-  bottom: 16px;
-  padding: 7px 11px;
-  border: 1px solid rgba(255, 255, 255, 0.4);
-  border-radius: 999px;
-  color: #FFFFFF;
-  background: rgba(61, 20, 77, 0.62);
-  font-size: 0.65rem;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  backdrop-filter: blur(8px);
-}
-
 .bonuses-emphasis {
   max-width: 900px;
   margin: 46px auto;
