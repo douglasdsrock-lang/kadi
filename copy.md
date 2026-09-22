@@ -79,11 +79,21 @@
 **[section: comparison/differentiator]**
 
 - **[headline]** Por Qué KADI Es Diferente
+- **[subheadline]** Queremos que realmente puedas avanzar
 - **[comparison_table]**
   - **[column A | label]** ❌ Otros cursos
-    **[column A | text]** Ves los videos, te quedas con dudas, y terminas abandonando sola/o.
+    - Aprendes sola
+    - No sabes cuánto cobrar
+    - Videos aislados
+    - No sabes qué comprar
+    - Terminas las clases sin saber por dónde comenzar
   - **[column B | label]** ✅ KADI
-    **[column B | text]** Aprendes desde cero, con acompañamiento humano y atención personalizada. No te soltamos la mano hasta que tengas resultados.
+    - Ruta paso a paso
+    - Guía de materiales
+    - Comunidad y soporte
+    - Orientación sobre costos y precios
+    - Ruta práctica: manos a la masa
+    - **KADI no es solo información. Es un camino para aprender y vender.**
 - **[testimonial/quote]** "Aquí vas a tener acompañamiento y resultado."
 
 ---
@@ -92,6 +102,7 @@
 **[section: bonuses]**
 
 - **[headline]** Bonos Exclusivos
+- **[eyebrow]** Y Además Te Llevas 6
 - **[cards: bonuses]**
   - **[card 1 | tag]** BONO 1
     **[card 1 | title]** Cómo Hacer Ambientador para Autos
@@ -102,6 +113,34 @@
   - **[card 3 | tag]** BONO 3
     **[card 3 | title]** Artes para Empaques
     **[card 3 | text]** Diseños listos para darle un toque profesional a tus productos.
+  - **[card 4 | tag]** BONO 4
+    **[card 4 | title]** Guía Completa con Recetas de Jabones Artesanales
+  - **[card 5 | tag]** BONO 5
+    **[card 5 | title]** Guía Completa con Recetas de Jabón Líquido
+  - **[card 6 | tag]** BONO 6
+    **[card 6 | title]** Guía de 7 Recetas Secretas de Jabones Artesanales que Más se Venden
+- **[emphasis]** Más conocimientos. Más posibilidades. Más productos para crear y vender.
+- **[special_bonus | tag]** BONO ESPECIAL
+- **[special_bonus | title]** Kit de Inicio KADI
+- **[special_bonus | description]** Te entregamos una guía práctica con:
+  - Información importante
+  - Materiales básicos
+  - Herramientas necesarias
+  - Qué cantidades comprar
+  - Qué materiales no necesitas al principio
+  - Checklist para preparar tu primera producción
+- **[special_bonus | closing]** Así sabrás exactamente por dónde comenzar.
+
+---
+
+## SEÇÃO 08 — DEPOIMENTOS
+**[section: testimonials]**
+
+- **[headline]** Ellas también comenzaron desde cero
+- **[description]** Descubre lo que nuestras alumnas están creando después de comenzar con el Método KADI.
+- **[supporting_text]** Historias, avances y mensajes de nuestras alumnas.
+- **[video_label]** Ella aprendió con KADI
+- **[closing]** Tu historia puede ser la próxima.
 
 ---
 
