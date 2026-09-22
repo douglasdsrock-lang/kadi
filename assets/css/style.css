@@ -1334,6 +1334,21 @@ h1, h2, h3, h4, h5, h6 {
   flex-shrink: 0;
 }
 
+.pricing-includes-highlight {
+  margin-top: 6px;
+  padding: 14px 16px;
+  border-radius: 14px;
+  color: #6827BE;
+  background: #F6EEFF;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.pricing-includes-highlight .pricing-check {
+  color: #FFFFFF;
+  background: #E3297A;
+}
+
 .pricing-price-box {
   background: var(--bg-cream);
   border-radius: var(--radius-lg);
@@ -1581,14 +1596,50 @@ h1, h2, h3, h4, h5, h6 {
   color: #FFFFFF;
   font-size: 2.8rem;
   line-height: 1.2;
-  margin-bottom: 22px;
+  margin-bottom: 28px;
+  text-transform: uppercase;
 }
 
-.closing-content p {
-  font-size: 1.25rem;
+.closing-reassurance {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 26px;
+}
+
+.closing-reassurance span {
+  padding: 9px 15px;
+  border: 1px solid rgba(255, 255, 255, 0.38);
+  border-radius: 999px;
+  color: #FFFFFF;
+  background: rgba(255, 255, 255, 0.1);
+  font-size: 0.95rem;
+  font-weight: 600;
+  backdrop-filter: blur(6px);
+}
+
+.closing-content .closing-emphasis {
+  margin-bottom: 14px;
+  color: #FFFFFF;
+  font-family: var(--font-display);
+  font-size: clamp(1.65rem, 3vw, 2.2rem);
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.closing-content .closing-description {
+  max-width: 700px;
+  margin: 0 auto 26px;
+  font-size: 1.15rem;
   color: rgba(255, 255, 255, 0.95);
-  line-height: 1.7;
-  margin-bottom: 38px;
+  line-height: 1.65;
+}
+
+.closing-question {
+  margin-bottom: 28px;
+  color: #FFFFFF;
+  font-size: 1.35rem;
 }
 
 .closing-btn {

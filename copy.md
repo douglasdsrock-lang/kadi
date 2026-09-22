@@ -147,14 +147,17 @@
 ## SEÇÃO 08 — OFERTA (INCLUI + PREÇO + CTA)
 **[section: offer/pricing]**
 
-- **[headline]** Lo Que Incluye KADI
+- **[headline]** Con tu inscripción recibes:
 - **[list: whats_included]**
-  - ✅ Curso completo en video (6 módulos)
-  - ✅ Grupo de soporte exclusivo (WhatsApp/Telegram)
-  - ✅ Acompañamiento personalizado con Carol y Karly
-  - ✅ Bono: Cómo Hacer Ambientador para Autos
-  - ✅ Bono: Exfoliante para Pies
-  - ✅ Bono: Artes para Empaques
+  - ✅ Curso completo KADI (6 módulos)
+  - ✅ Comunidad & Soporte
+  - ✅ Materiales complementarios
+  - ✅ Método paso a paso
+  - ✅ Bono exclusivo: Ambientadores para auto
+  - ✅ Bono exclusivo: Exfoliante para pies
+  - ✅ Bono exclusivo: Artes para empaques
+  - ✅ Bono especial: Kit de Inicio KADI
+  - ✅ Acceso inmediato para comenzar ahora mismo
 - **[price]** $54,99
 - **[cta]** QUIERO EMPEZAR AHORA
 
@@ -172,20 +175,37 @@
 **[section: faq]**
 
 - **[headline]** Preguntas Frecuentes
-- **[faq_item 1 | question]** ¿Necesito tener experiencia previa?
-  **[faq_item 1 | answer]** No. KADI fue creado para quienes están empezando desde absoluto cero.
-- **[faq_item 2 | question]** ¿Voy a tener soporte si tengo dudas?
-  **[faq_item 2 | answer]** Sí. Vas a tener acceso a un grupo de soporte directo con Carol y Karly.
-- **[faq_item 3 | question]** ¿Podré vender los jabones después?
-  **[faq_item 3 | answer]** Sí, el módulo 6 está dedicado justamente a las estrategias de venta para que empieces a generar ingresos.
-- **[faq_item 4 | question]** ¿Y si no me gusta el curso?
-  **[faq_item 4 | answer]** Tienes 7 días de garantía incondicional.
+- **[faq_item 1 | question]** Necesito tener experiencia?
+  **[faq_item 1 | answer]** No. KADI está diseñado para que puedas comenzar desde cero y avanzar paso a paso, de forma fácil y rápida.
+- **[faq_item 2 | question]** Necesito ser experta en química?
+  **[faq_item 2 | answer]** No necesitas conocimientos previos. El programa está pensado para enseñarte los fundamentos necesarios durante el proceso.
+- **[faq_item 3 | question]** Qué materiales necesito?
+  **[faq_item 3 | answer]** Dentro del programa aprenderás qué materiales y herramientas necesitas para comenzar y cuáles no son indispensables para iniciar.
+- **[faq_item 4 | question]** Puedo hacer el curso a mi propio ritmo?
+  **[faq_item 4 | answer]** Sí. El contenido está diseñado para que puedas avanzar según sea tu disponibilidad.
+- **[faq_item 5 | question]** Puedo hacerlo desde casa?
+  **[faq_item 5 | answer]** Sí. KADI está pensado para que puedas aprender y practicar desde la cocina de tu propia casa con los materiales adecuados.
+- **[faq_item 6 | question]** Puedo vender los jabones?
+  **[faq_item 6 | answer]** Sí. El programa incluye contenidos relacionados con costos, precios, presentación y venta para ayudarte a dar ese siguiente paso.
+- **[faq_item 7 | question]** Tendré soporte?
+  **[faq_item 7 | answer]** Sí. Tendrás acceso al espacio de soporte y a nuestra comunidad exclusiva de alumnas, incluidos en tu inscripción.
+- **[faq_item 8 | question]** Cuándo recibo el acceso?
+  **[faq_item 8 | answer]** El acceso se entrega de forma inmediata después de completar correctamente tu compra.
+- **[faq_item 9 | question]** Recibo certificado de participación?
+  **[faq_item 9 | answer]** Sí. Nuestro curso ofrece un certificado de participación por tu esfuerzo y dedicación. Estará disponible al finalizar tu curso de forma exitosa.
+- **[faq_item 10 | question]** Qué pasa si KADI no es para mí?
+  **[faq_item 10 | answer]** Cuentas con una garantía de 7 días, de acuerdo con las condiciones aplicables.
+- **[faq_item 11 | question]** El pago es seguro?
+  **[faq_item 11 | answer]** Sí. El proceso de pago se realiza mediante la plataforma Hotmart.
 
 ---
 
 ## SEÇÃO 11 — FECHAMENTO (CTA FINAL)
 **[section: closing]**
 
-- **[final_headline]** No necesitas saberlo todo hoy. Solo necesitas dar el primer paso.
-- **[final_description]** Dentro de algunas semanas, puedes estar exactamente donde estás ahora — sin saber por dónde empezar. O puedes estar sosteniendo tu primer jabón artesanal, hecho con tus propias manos, listo para empacar y vender.
-- **[cta: final]** QUIERO SER PARTE DE KADI AHORA
+- **[final_headline]** Tu primer jabón puede ser el comienzo.
+- **[reassurance]** No necesitas saberlo todo. No necesitas tener experiencia. No necesitas tener un negocio.
+- **[emphasis]** Sólo necesitas comenzar.
+- **[final_description]** Aprende con KADI, crea tus primeros productos y descubre hasta dónde puedes llegar con esta nueva habilidad.
+- **[question]** ¿Estás lista para comenzar?
+- **[cta: final]** QUIERO EMPEZAR AHORA
