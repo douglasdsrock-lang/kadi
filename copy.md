@@ -7,9 +7,9 @@
 **[section: hero]**
 
 - **[badge/eyebrow]** KADI · JABONERÍA ARTESANAL
-- **[headline]** Aprende a Crear Jabones Artesanales Desde Cero — y Convierte Eso en una Fuente de Ingresos
-- **[subheadline]** Aunque nunca hayas hecho un jabón en tu vida.
-- **[description]** Curso completo + grupo de soporte directo con quienes te enseñan. No vas a aprender sola/o: vas a tener manos en la masa, literalmente.
+- **[headline]** Aprende a Crear Jabones Artesanales de Glicerina desde Cero
+- **[subheadline]** Aunque nunca hayas hecho un jabón antes.
+- **[description]** Descubre que materiales necesitas, como crear tus primeros jabones artesanales de glicerina, como darles una presentación profesional y convertir está habilidad en una oportunidad para generar ingresos desde casa de fora fácil y rápida. No necesitas experiencia previa, con las manos en la masa te enseñaremos el camino.
 - **[cta]** QUIERO APRENDER A CREAR MI JABÓN
 
 ---
@@ -156,6 +156,9 @@
   - ✅ Bono exclusivo: Ambientadores para auto
   - ✅ Bono exclusivo: Exfoliante para pies
   - ✅ Bono exclusivo: Artes para empaques
+  - ✅ Bono exclusivo: Guía Completa con Recetas de Jabones Artesanales
+  - ✅ Bono exclusivo: Guía Completa con Recetas de Jabón Líquido
+  - ✅ Bono exclusivo: Guía de 7 Recetas Secretas de Jabones Artesanales que Más se Venden
   - ✅ Bono especial: Kit de Inicio KADI
   - ✅ Acceso inmediato para comenzar ahora mismo
 - **[price]** $54,99
