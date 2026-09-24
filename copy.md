@@ -6,6 +6,7 @@
 ## SEÇÃO 01 — HERO
 **[section: hero]**
 
+- **[top_banner]** ¡ÚLTIMOS CUPOS DISPONIBLES! Acceso inmediato con soporte directo de Carol y Karly + 6 Bonos Exclusivos + Bono Especial KADI.
 - **[badge/eyebrow]** KADI · JABONERÍA ARTESANAL
 - **[headline]** Aprende a Crear Jabones Artesanales de Glicerina desde Cero
 - **[subheadline]** Aunque nunca hayas hecho un jabón antes.
