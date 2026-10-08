@@ -104,9 +104,12 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   const applySiteConfig = (config) => {
-    if (config.checkout) {
+    const checkoutUrl = document.body.dataset.checkoutUrl || config.checkout;
+    const offerPrice = document.body.dataset.offerPrice || config.preco;
+
+    if (checkoutUrl) {
       document.querySelectorAll('[data-config-link="checkout"]').forEach((link) => {
-        link.href = config.checkout;
+        link.href = checkoutUrl;
         link.target = '_blank';
         link.rel = 'noopener noreferrer';
       });
@@ -121,9 +124,9 @@ document.addEventListener('DOMContentLoaded', () => {
       setHeroVideo(config.video);
     }
 
-    if (config.preco) {
+    if (offerPrice) {
       const price = document.querySelector('.price-main');
-      if (price) price.textContent = config.preco;
+      if (price) price.textContent = offerPrice;
     }
   };
 
