@@ -3,40 +3,15 @@
  */
 
 document.addEventListener('DOMContentLoaded', () => {
-  const sheetCsvUrl = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTmaucyOK_7UGF6rzHi44R-N_REMY7Hx4pml4hGn889U2RqIxDILE5gIj_NvVsMAqm2a12KUngvOrBU/pub?output=csv';
-
-  const parseCsvRow = (row) => {
-    const fields = [];
-    let field = '';
-    let insideQuotes = false;
-
-    for (let index = 0; index < row.length; index += 1) {
-      const character = row[index];
-
-      if (character === '"') {
-        if (insideQuotes && row[index + 1] === '"') {
-          field += '"';
-          index += 1;
-        } else {
-          insideQuotes = !insideQuotes;
-        }
-      } else if (character === ',' && !insideQuotes) {
-        fields.push(field.trim());
-        field = '';
-      } else {
-        field += character;
-      }
-    }
-
-    fields.push(field.trim());
-    return fields;
+  // Conteúdo editável vem da Central Arteli (projeto "kadi", o mesmo para as duas
+  // versões). Os campos ficam em arteli-content.js; preço e checkout são escolhidos
+  // pelo <body data-currency="usd|eur">. Se a Central não responder ou nada estiver
+  // publicado, a página fica com os valores do próprio HTML.
+  const central = {
+    project: document.body.dataset.project || 'kadi',
+    supabaseUrl: 'https://jqccxkzwjpgjtxubhkdt.supabase.co',
+    publishableKey: 'sb_publishable_OQJWuEuJHoMSOWRlHS_lUA_kH97z7lh',
   };
-
-  const normalizeKey = (value) => value
-    .trim()
-    .toLowerCase()
-    .normalize('NFD')
-    .replace(/[\u0300-\u036f]/g, '');
 
   const normalizeVideoUrl = (value) => {
     try {
@@ -99,54 +74,36 @@ document.addEventListener('DOMContentLoaded', () => {
       iframe.allowFullscreen = true;
       container.replaceChildren(iframe);
     } catch {
-      console.warn('O link de vídeo informado na planilha não é válido. O player padrão será mantido.');
+      console.warn('O link de vídeo informado no painel não é válido. O player padrão será mantido.');
     }
   };
 
   const applySiteConfig = (config) => {
-    const checkoutUrl = document.body.dataset.checkoutUrl || config.checkout;
-    const offerPrice = document.body.dataset.offerPrice || config.preco;
+    if (window.ArteliKadi) window.ArteliKadi.apply(config);
 
-    if (checkoutUrl) {
-      document.querySelectorAll('[data-config-link="checkout"]').forEach((link) => {
-        link.href = checkoutUrl;
-        link.target = '_blank';
-        link.rel = 'noopener noreferrer';
-      });
-    }
-
-    if (config.whatsapp) {
-      const whatsappButton = document.querySelector('.whatsapp-float-btn');
-      if (whatsappButton) whatsappButton.href = config.whatsapp;
-    }
-
-    if (config.video) {
-      setHeroVideo(config.video);
-    }
-
-    if (offerPrice) {
-      const price = document.querySelector('.price-main');
-      if (price) price.textContent = offerPrice;
+    const videoUrl = config.hero && config.hero.videoUrl;
+    if (typeof videoUrl === 'string' && videoUrl.trim()) {
+      setHeroVideo(videoUrl.trim());
     }
   };
 
-  fetch(`${sheetCsvUrl}&_=${Date.now()}`, { cache: 'no-store' })
+  fetch(`${central.supabaseUrl}/rest/v1/rpc/get_public_project_config`, {
+    method: 'POST',
+    headers: { apikey: central.publishableKey, 'Content-Type': 'application/json' },
+    body: JSON.stringify({ project_slug: central.project }),
+    signal: AbortSignal.timeout(5000),
+  })
     .then((response) => {
       if (!response.ok) throw new Error(`HTTP ${response.status}`);
-      return response.text();
+      return response.json();
     })
-    .then((csv) => {
-      const config = {};
-      csv.replace(/^\uFEFF/, '').split(/\r?\n/).slice(1).forEach((row) => {
-        if (!row.trim()) return;
-        const [type = '', value = ''] = parseCsvRow(row);
-        const key = normalizeKey(type);
-        if (key && value.trim()) config[key] = value.trim();
-      });
-      applySiteConfig(config);
+    .then((result) => {
+      if (result?.project === central.project && result.config && typeof result.config === 'object') {
+        applySiteConfig(result.config);
+      }
     })
     .catch((error) => {
-      console.warn('Não foi possível carregar a configuração da planilha. Os valores padrão serão mantidos.', error);
+      console.warn('Não foi possível carregar a configuração da Central Arteli. Os valores padrão serão mantidos.', error);
     });
 
   // 3. FAQ Accordion
